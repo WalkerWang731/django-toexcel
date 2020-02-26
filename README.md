@@ -1,7 +1,5 @@
 # Django-toexcel
 
----
-
 ## Introduction
 
 Django-toexcel is a simple Django app used to dump excel files from django models. It‘s for users who are already skilled with Django-admin. Django-toexcel than djano-import-export support more version and  more simple. But same to name, Django-toexcel not support import.
@@ -39,8 +37,7 @@ urlpatterns = [
     url(r'^toexcel/', include(toexcel.urls))
 ]
 ```
-
-1. Start the development server like this:
+4.Start the development server like this:
 
 ```
 python manage.py runserver 127.0.0.1:8000
