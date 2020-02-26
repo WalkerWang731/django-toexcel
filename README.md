@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Django-toexcel is a simple Django app used to dump excel files from django models. It‘s for users who are already skilled with Django-admin. Django-toexcel more then djano-import-export support more version and  more simple. But same to name, Django-toexcel not support import.
+Django-toexcel is a simple Django app used to dump excel files from django models. It‘s for users who are already skilled with Django-admin. Django-toexcel than djano-import-export support more version and  more simple. But same to name, Django-toexcel not support import.
 
 ## Features
 
@@ -52,7 +52,7 @@ python manage.py runserver 127.0.0.1:8000
 http://127.0.0.1:8000/toexcel/dump?app=app01&admin=AdminStudents&models=Students
 ```
 
-## Example project
+## Project example
 
 ./test\_project is Django project. You can start this project and enjoy Django-toexcel
 
@@ -165,11 +165,29 @@ class StuClass(models.Model):
 
     admin.site.register(models.StuClass, AdminStuClass)
 
+## Request URL
+
+> URL: /toexcel/dump
+
+> Method: GET
+
+### Parameters
+
+| **Name** | **Explain** |
+| :--- | :--- |
+| app | your app name \(directory name\) |
+| models | your class name in models.py |
+| admin  | your register class in admin.py |
+
+### Request example
+
+```
+http://127.0.0.1:8000/toexcel/dump?app=app01&admin=AdminStudents&models=Students
+```
+
 ## Suggest
 
 Because use to django's render method, we suggest no more than 50,000 data.
 
 If more than 50,000 data, then you should modify the source code,and replace django's render method to ajax, maybe more data can be supported
-
-
 
